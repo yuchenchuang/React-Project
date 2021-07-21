@@ -1,12 +1,12 @@
-import Navbar from "./Navbar";
 import Group from "./Group";
-import Chat from "./Chat";
+import "./index.css";
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      <h1 className="greet">WELCOME TO CHATCHAT</h1>
       <Group />
+      <div id="chatroom"></div>
     </div>
   );
 }

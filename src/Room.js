@@ -1,6 +1,10 @@
+import Chat from "./Chat";
+import ReactDOM from "react-dom";
+
 const Room = ({ rooms }) => {
-  function handleClick() {
-    console.log();
+  function handleClick(title) {
+    const chatroom = <Chat room_name={title} />;
+    ReactDOM.render(chatroom, document.getElementById("chatroom"));
   }
   return (
     <div className="room-list">
@@ -10,8 +14,11 @@ const Room = ({ rooms }) => {
             src={`http://localhost:1337${room.Media.url}`}
             alt="none"
             className="group_img"
-            onClick={handleClick}
+            onClick={() => handleClick(room.Text)}
           />
+          <a href="#" className="room-title">
+            {room.Text}
+          </a>
         </div>
       ))}
     </div>

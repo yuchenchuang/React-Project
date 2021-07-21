@@ -1,19 +1,76 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Crimson Text", serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+body {
+  background-color: black;
+}
+.greet {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.room-list {
+  display: flex;
+  width: calc(70%);
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.room-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.room-preview:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.room-title {
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+}
 .group_img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  cursor: pointer;
+}
+/* Chat room && chat room buttons styling */
+.chat {
+  color: white;
+  text-align: center;
+  margin-top: 300px;
+}
+#chatroom_interval {
+  margin: auto;
+  display: block;
+  width: calc(70%);
+  height: 400px;
+  background-color: white;
+  overflow-y: scroll;
+  list-style-type: none;
+}
+#chatroom_interval li {
+  font-size: 28px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px 30px 0px;
+}
+.buttons button {
+  cursor: pointer;
+}
+.buttons button,
+.buttons input {
+  font-size: 30px;
+  margin: 0px 5px 0px 5px;
 }
